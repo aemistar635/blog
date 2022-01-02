@@ -5,7 +5,7 @@
                       v-model="comment"/>
         </div>
         <button :disabled="!comment" class="btn btn-primary btn-sm mt-3"
-                @click="addComment({'pId':pId,'comment':comment})">Comment
+                @click="addComm({'pId': pId, 'comment': comment})">Comment
         </button>
     </div>
 </template>
@@ -25,7 +25,11 @@
         },
         methods: {
             ...mapActions('postEditor', ['addComment']),
-        }
+            addComm(value) {
+                this.addComment(value);
+                this.comment = '';
+            }
+        },
     }
 </script>
 
