@@ -1,0 +1,8 @@
+@import "~@mdi/font/css/materialdesignicons.css";
+
+.d-flex {
+  display: flex;
+}
+.small-text{
+  font-size:12px;
+}
